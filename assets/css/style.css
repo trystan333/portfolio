@@ -1,3 +1,47 @@
 * {
     box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    scroll-behavior:smooth;
+    text-decoration: none;
 }
+
+header {
+    background-color:#c19875;
+    font-family: 'Nunito', Arial, sans-serif;
+    
+}
+
+header h1 {
+    display: inline-block;
+    letter-spacing: 0.5px;
+    padding: 15px 20px;
+    color: white;
+    font-size: 45px;
+}
+
+header nav {
+    padding-top: 30px;
+    margin-right: 20px;
+    float: right;
+    font-size: 20px;
+    color:white
+}
+
+header ul {
+    margin-right: 6px;
+    list-style-type:none;
+    display: flex;
+}
+
+header nav ul li {
+    display:inline-block;
+    color: white;
+    margin-left: 15px;
+    
+}
+
+a {
+    color: white;
+}
+
