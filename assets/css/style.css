@@ -4,15 +4,34 @@
     margin: 0;
     scroll-behavior:smooth;
     text-decoration: none;
-    font-family: 'Sawarabi Mincho', serif; Arial;
-    
+    font-family: 'Sawarabi Mincho', serif, Arial, Helvetica, sans-serif;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #fff; 
+}
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #bb8d7c; 
+}
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #bb8d7c; 
 }
 
 body {
 
-    backdrop-filter: blur(4px);
-    
-   
+    backdrop-filter: blur(0px);
+    /* background-image:url(..//images/bamboo.jpg); */
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 
 header {
@@ -25,8 +44,6 @@ header h1 {
     padding: 15px 20px;
     color: #4b4b46;
     font-size: 45px;
-    
-    
 }
 
 header nav {
@@ -51,17 +68,16 @@ header nav ul li {
 }
 
 a {
-    color: white;
+    color: #fff;
     
 }
 
 a:hover {
     color: #bb8d7c;
     text-shadow: 2px;
-    border-radius: 1px solid #4b4b46;
+    /* border-radius: 1px solid #4b4b46; */
     transition: 0.2s;
-    ;
-  }
+}
 
 main {
     display:flex;
@@ -74,6 +90,35 @@ main {
     
 }
 
+
+/* ---------------------------------------------------------------------------------/ about me section */
+
+/* .images {
+    object-fit: contain;
+    margin-left:750px; 
+    height: 525px;
+    width:auto;
+    float:inline-end; 
+    flex-direction: row;
+}
+ */
+.piccontainer {
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    
+}
+
+.images {
+    position:relative;
+    display:flex;
+    height: 525px;
+    width: auto;
+    box-sizing:content-box;
+    margin-left: 750px;
+    top: -5px;
+}
+
 #about-me {
     height: 350px;
     width: 500px;
@@ -84,6 +129,17 @@ main {
     margin-left: 30px;
     opacity: 0.5;
     filter:blur(2px);
+    font-size: 25px;
+
+
+     /* Where i left off: what to do: fix images being displayed as column, and fix the text sliding and looking like shit when u hover over */
+}
+
+#about-me p {
+    padding: 20px;
+    justify-content: center;
+    display:flex;
+    flex-wrap:wrap;
 }
 
 #about-me:hover {
@@ -93,12 +149,24 @@ main {
     height: 525px;
     width: 750px;
     font-size: 30px;
+    padding: 30px;
 }
 
 #about-me:hover > p {
     transition: 0.4s ease;
     color: #bb8d7c;
 }
+
+#about-me:hover .piccontainer {
+    display:inline-block;
+    transition:3s ease;
+}
+
+#about-me:not(:hover) .piccontainer {
+    display:none;
+    transition:3s ease;
+}
+
 
 #about-me:not(:hover) {
     opacity: 0.5;
@@ -112,18 +180,83 @@ main {
     color:#4b4b46;
     transition: 0.5s ease-in-out;
 }
-
-#my-portfolio {
+/* ---------------------------------------------------------------------------------/ my work section */
+#my-work {
     height: 350px;
-    width: 80%;
-    background-color: #e2e2e0;
+    width: 500px;
+    background-color: #eaeae8;
     margin-bottom: 20px;
+    border-radius: 20px;
+    align-self: flex-start;
+    margin-left: 30px;
+    opacity: 0.5;
+    filter:blur(2px);
 }
 
+#my-work:hover {
+    opacity: 1;
+    filter:blur(0px);
+    transition: 0.4s ease;
+    height: 525px;
+    width: 750px;
+    font-size: 30px;
+}
+
+#my-work:hover > p {
+    transition: 0.4s ease;
+    color: #bb8d7c;
+}
+
+#my-work:not(:hover) {
+    opacity: 0.5;
+    filter:blur(3px);
+    transition: 0.5s ease-in-out;
+    height: 350px;
+    width: 500px;
+}
+
+#my-work:not(:hover) > p {
+    color:#4b4b46;
+    transition: 0.5s ease-in-out;
+}
+/* ---------------------------------------------------------------------------------/ contact me section */
 #contact-me {
     height: 350px;
-    width: 80%;
-
+    width: 500px;
     background-color: #eaeae8;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    align-self: flex-start;
+    margin-left: 30px;
+    opacity: 0.5;
+    filter:blur(2px);
 }
+
+#contact-me:hover {
+    opacity: 1;
+    filter:blur(0px);
+    transition: 0.4s ease;
+    height: 525px;
+    width: 750px;
+    font-size: 30px;
+}
+
+#contact-me:hover > p {
+    transition: 0.4s ease;
+    color: #bb8d7c;
+}
+
+#contact-me:not(:hover) {
+    opacity: 0.5;
+    filter:blur(3px);
+    transition: 0.5s ease-in-out;
+    height: 350px;
+    width: 500px;
+}
+
+#contact-me:not(:hover) > p {
+    color:#4b4b46;
+    transition: 0.5s ease-in-out;
+}
+
 
