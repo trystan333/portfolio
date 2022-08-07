@@ -4,80 +4,106 @@
     margin: 0;
     scroll-behavior:smooth;
     text-decoration: none;
-    font-family: 'Sawarabi Mincho', serif, Arial, Helvetica, sans-serif;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: bold;
 }
 
+  /* scrollbar */
 ::-webkit-scrollbar {
     width: 10px;
 }
-  
-  /* Track */
+  /* track */
   ::-webkit-scrollbar-track {
     background: #fff; 
 }
-   
-  /* Handle */
+  /* handle */
   ::-webkit-scrollbar-thumb {
     background: #bb8d7c; 
 }
-  
-  /* Handle on hover */
+  /* handle on hover */
   ::-webkit-scrollbar-thumb:hover {
     background: #bb8d7c; 
 }
 
-body {
-
-    backdrop-filter: blur(0px);
-    /* background-image:url(..//images/bamboo.jpg); */
-    background-repeat: no-repeat;
-    background-size: contain;
+/*                                                                                    header
+-------------------------------------------------------------------------------------------- */
+header {
+    display:flex;
+    background-color:#eaeae8;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    height: 100px;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow:1px 0px 17px 0px #4b4b46;
 }
 
-header {
-    background-color:#eaeae8;
+header #ascii {
+    align-self: center;
+    user-select:none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    color: #bb8d7c;
+    margin-left: 15px;
 }
 
 header h1 {
     display: inline-block;
     letter-spacing: 2px;
-    padding: 15px 20px;
+    margin-left: 23px;
     color: #4b4b46;
     font-size: 45px;
+    /* background-color:#dddddc; */
+    padding: 2px;
+    border-radius: 10px;
+    text-shadow: 0px 1px 3px #4b4b46;
+    user-select:none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
 }
 
 header nav {
-    padding-top: 30px;
-    margin-right: 20px;
-    float: right;
+    /* margin-right: 28px; */
     font-size: 20px;
     color:#eaeae8;
+    text-shadow: 0px 1px 3px #4b4b46;
+    
 }
 
 header ul {
-    margin-right: 6px;
     list-style-type:none;
     display: flex;
+    /* margin-left: 20px; */
+    align-content:center;
 }
 
 header nav ul li {
-    display:inline-block;
+    display:flex;
     color: #eaeae8;
-    margin-left: 15px;
-    
+    margin: 25px;
+    justify-content: center;
 }
 
-a {
+
+/*                                                                                    anchor
+-------------------------------------------------------------------------------------------- */
+
+header a {
     color: #fff;
-    
 }
 
-a:hover {
+header a:hover {
     color: #bb8d7c;
-    text-shadow: 2px;
-    /* border-radius: 1px solid #4b4b46; */
     transition: 0.2s;
 }
+
+header a:not(:hover) {
+    color: #ffffff;
+    transition: 0.2s;
+}
+
+/*                                                                                      main
+-------------------------------------------------------------------------------------------- */
 
 main {
     display:flex;
@@ -89,174 +115,109 @@ main {
     color:#4b4b46;
     
 }
+/*                                                                          about me section
+-------------------------------------------------------------------------------------------- */
 
-
-/* ---------------------------------------------------------------------------------/ about me section */
-
-/* .images {
-    object-fit: contain;
-    margin-left:750px; 
-    height: 525px;
-    width:auto;
-    float:inline-end; 
-    flex-direction: row;
-}
- */
-.piccontainer {
-    display: flex;
-    flex-direction:row;
-    flex-wrap: wrap;
-    
+.about-me {
+    height: 300px;
+    width: 1050px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background-image: linear-gradient(180deg, #eaeae8, #fff);
+    padding: 15px;
+    /* box-shadow: 1px 4px 11px #4b4b46; */
 }
 
-.images {
-    position:relative;
+.about-me h2 {
+    margin-top: 5px;
+    font-size:xx-large;
+}
+
+.about-me p {
+    margin-top: 5px;
+    padding: 15px;
+    font-size: x-large;
+}
+
+/*                                                                           my work section
+-------------------------------------------------------------------------------------------- */
+
+.my-work {
+    height: 800px;
+    width: 1350px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background-image: linear-gradient(180deg, #eaeae8, #fff);
+    padding: 15px;
+    font-size:x-large;
+}
+
+
+.workpics {
     display:flex;
-    height: 525px;
-    width: auto;
-    box-sizing:content-box;
-    margin-left: 750px;
-    top: -5px;
-}
-
-#about-me {
-    height: 350px;
-    width: 500px;
-    background-color: #eaeae8;
-    margin-bottom: 20px;
-    border-radius: 20px;
-    align-self: flex-start;
-    margin-left: 30px;
-    opacity: 0.5;
-    filter:blur(2px);
-    font-size: 25px;
-
-
-
-}
-
-#about-me p {
-    padding: 20px;
+    object-fit:contain;
+    padding: 5px;
     justify-content: center;
+    margin-top: 15px;
+    align-items: center;
+
+}
+
+.workpics img {
+    margin: 5px;
+    box-shadow: 0px 5px 12px #4b4b46;
+    border-radius: 5px;
+    align-self: flex-start;
+}
+
+.workpics a {
     display:flex;
-    flex-wrap:wrap;
+    justify-content: center;
 }
 
-#about-me:hover {
-    opacity: 1;
-    filter:blur(0px);
-    transition: 0.4s ease;
-    height: 525px;
-    width: 750px;
-    font-size: 30px;
-    padding: 30px;
+.column {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    height:auto;
+    width:auto;
 }
 
-#about-me:hover > p {
-    transition: 0.4s ease;
-    color: #bb8d7c;
+.workpics img:hover {
+    box-shadow: 0px 5px 20px 10px #bb8d7c;
+    transition: 0.2s;
 }
 
-#about-me:hover .piccontainer {
-    display:inline-block;
-    transition:3s ease;
+.workpics img:not(:hover) {
+    box-shadow: 0px 5px 12px 0px #4b4b46;
+    transition: 0.3s;
 }
 
-#about-me:not(:hover) .piccontainer {
-    display:none;
-    transition:3s ease;
-}
+/*                                                                    footer/contact section
+-------------------------------------------------------------------------------------------- */
 
-
-#about-me:not(:hover) {
-    opacity: 0.5;
-    filter:blur(3px);
-    transition: 0.5s ease-in-out;
-    height: 350px;
-    width: 500px;
-}
-
-#about-me:not(:hover) > p {
-    color:#4b4b46;
-    transition: 0.5s ease-in-out;
-}
-/* ---------------------------------------------------------------------------------/ my work section */
-#my-work {
-    height: 350px;
-    width: 500px;
-    background-color: #eaeae8;
+.contact-me {
+    height: 200px;
+    width: 1050px;
+    font-size: x-large;
+    display:flex;
+    background-color:#eaeae8;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0 auto;
+    background-image: linear-gradient(180deg, #fff, #eaeae8);
     margin-bottom: 20px;
-    border-radius: 20px;
-    align-self: flex-start;
-    margin-left: 30px;
-    opacity: 0.5;
-    filter:blur(2px);
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
 }
 
-#my-work:hover {
-    opacity: 1;
-    filter:blur(0px);
-    transition: 0.4s ease;
-    height: 525px;
-    width: 750px;
-    font-size: 30px;
-}
-
-#my-work:hover > p {
-    transition: 0.4s ease;
-    color: #bb8d7c;
-}
-
-#my-work:not(:hover) {
-    opacity: 0.5;
-    filter:blur(3px);
-    transition: 0.5s ease-in-out;
-    height: 350px;
-    width: 500px;
-}
-
-#my-work:not(:hover) > p {
+footer h3 a {
     color:#4b4b46;
-    transition: 0.5s ease-in-out;
-}
-/* ---------------------------------------------------------------------------------/ contact me section */
-#contact-me {
-    height: 350px;
-    width: 500px;
-    background-color: #eaeae8;
-    margin-bottom: 20px;
-    border-radius: 20px;
-    align-self: flex-start;
-    margin-left: 30px;
-    opacity: 0.5;
-    filter:blur(2px);
-}
-
-#contact-me:hover {
-    opacity: 1;
-    filter:blur(0px);
-    transition: 0.4s ease;
-    height: 525px;
-    width: 750px;
-    font-size: 30px;
-}
-
-#contact-me:hover > p {
-    transition: 0.4s ease;
-    color: #bb8d7c;
-}
-
-#contact-me:not(:hover) {
-    opacity: 0.5;
-    filter:blur(3px);
-    transition: 0.5s ease-in-out;
-    height: 350px;
-    width: 500px;
-}
-
-#contact-me:not(:hover) > p {
-    color:#4b4b46;
-    transition: 0.5s ease-in-out;
+    /* text-decoration: none; */
+    padding-top: 20px;
 }
 
 
+/* todo: add media queries, and add text that comes up on the images when you
+ hover over them, saying what project they are, also fix the first image not being
+ centered with the other 4 */
