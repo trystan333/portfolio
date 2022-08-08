@@ -152,6 +152,30 @@ main {
     font-size:x-large;
 }
 
+.hoverbox {
+    position:relative;
+    margin-right: 10px;
+}
+
+.hoverbox img {
+    width:100%;
+    max-width: fit-content;
+}
+
+.hovertext {
+    padding: 10px;
+    position:absolute;
+    bottom: 20px;
+    left: 5px;
+    color:#eaeae8;
+    background-color: rgba(75, 75, 70, 0.5);
+    user-select:none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    letter-spacing: 1px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
 
 .workpics {
     display:flex;
@@ -173,6 +197,7 @@ main {
 .workpics a {
     display:flex;
     justify-content: center;
+    align-items: center;
 }
 
 .column {
@@ -218,6 +243,4 @@ footer h3 a {
 }
 
 
-/* todo: add media queries, and add text that comes up on the images when you
- hover over them, saying what project they are, also fix the first image not being
- centered with the other 4 */
+/* todo: add media queries */
